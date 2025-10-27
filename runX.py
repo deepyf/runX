@@ -32,7 +32,7 @@ def round_half_up(value, decimals=1):
     rounded = decimal_value.quantize(Decimal('0.1'), rounding=ROUND_HALF_UP)
     return float(rounded)
 
-with open("ghInX", newline="") as fin:
+with open("ghIn_X", newline="") as fin:
     reader = csv.DictReader(fin)
     symbols = [row["T"] for row in reader]
 
@@ -75,7 +75,7 @@ for sym in symbols:
 
 data_rows.sort(key=lambda x: x[5], reverse=True)
 
-with open("ghOutX", "w", newline="", encoding="utf-8") as fout:
+with open("ghOut_X", "w", newline="", encoding="utf-8") as fout:
     writer = csv.writer(fout)
     writer.writerow(["T","D","L","H","R"])
     for row in data_rows:
