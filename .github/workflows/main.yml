@@ -2,8 +2,8 @@ name: Run script and commit output
 
 'on':
   schedule:
-    - cron: '30 7 * * 1-5'
-    - cron: '0 14 * * 1-5'
+    - cron: '30 7 * * 0-6'
+    - cron: '0 14 * * 0-6'
   workflow_dispatch:
 
 permissions:
